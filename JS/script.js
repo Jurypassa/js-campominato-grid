@@ -7,22 +7,24 @@
 
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-// const easy = document.getElementById("easy").value;
+const easy = document.getElementById("easy").value;
 // console.log(easy);
-// const hard = document.getElementById("hard").value;
+const hard = document.getElementById("hard").value;
 // console.log(hard);
-// const crazy = document.getElementById("crazy").value;
+const crazy = document.getElementById("crazy").value;
 // console.log(crazy);
 let play = document.getElementById("play");
 
 
-play.addEventListener ("click", function(){
+play.addEventListener("click", function(){
 
     const select = document.getElementById("select").value;
 
     switch (select){
         case easy:
-            console.log("aaa");
+            for (let i = 0; i < 49; i++){
+                document.querySelector(".container").innerHTML += `<div class="square49"></div>`
+            }
             break;
         case hard:
             console.log("bbb");
@@ -31,14 +33,3 @@ play.addEventListener ("click", function(){
             console.log("ccc");
     }
 })
-
-
-// play.addEventListener("click", function(){
-//     if (easy){
-//         console.log("aaaa");
-//     }else if (hard){
-//         console.log("bbbb");
-//     }else{
-//         console.log("cccc");
-//     }
-// })
